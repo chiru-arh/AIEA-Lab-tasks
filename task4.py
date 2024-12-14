@@ -21,7 +21,6 @@ def parse_prolog(prolog_text):
     rules = []
 
     for statement in statements:
-        # Facts don't have :-, rules do
         if ":-" in statement:
             rules.append(statement[:-1])
         else:
